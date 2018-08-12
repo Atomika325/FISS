@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <!-- Site made with Mobirise Website Builder v4.7.7, https://mobirise.com -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v4.7.7, mobirise.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="assets/images/logo4.png" type="image/x-icon">
+  <meta name="description" content="Web Builder Description">
+  <title>Add Home Page</title>
+  <link rel="stylesheet" href="assets/web/assets/mobirise-icons/mobirise-icons.css">
+  <link rel="stylesheet" href="assets/tether/tether.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="assets/dropdown/css/style.css">
+  <link rel="stylesheet" href="assets/snow-plugins/style.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+  <link rel="stylesheet" href="assets/styles.css">
+
+
+
+</head>
+<body>
+  <section></section>
+   <section class="menu cid-qVV32xJqCa" once="menu" id="menu1-1o">
+
+
+
+    <nav class="navbar navbar-expand beta-menu navbar-dropdown align-items-center navbar-fixed-top navbar-toggleable-sm">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>            </div>
+        </button>
+        <div class="menu-logo">
+            <div class="navbar-brand">
+                <span class="navbar-logo">
+                    <a href="AdminHome.html">
+                         <img src="assets/images/polytechnic-university-of-the-philippines-san-juan-logo.svg-122x122.png" alt="PUP San Juan" title="" style="height: 3.8rem;">
+                    </a>
+                </span>
+                <span class="navbar-caption-wrap"><a class="navbar-caption text-white display-4" href="AdminHome.html">
+                        Faculty Information Scheduling System</a></span>
+            </div>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true"><li class="nav-item">
+                    <a class="nav-link link text-white display-4" href="AdminHome.html">
+
+                        Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link text-white display-4" href="newpractice.html">
+
+                        Add</a>
+                </li><li class="nav-item dropdown open"><a class="nav-link link text-white dropdown-toggle display-4" href="https://mobirise.com" data-toggle="dropdown-submenu" aria-expanded="true">
+                        
+                        Schedule</a><div class="dropdown-menu"><a class="text-white dropdown-item display-4" href="ProfSched.html">Professor Schedule</a><a class="text-white dropdown-item display-4" href="StudentSched.html">Student Schedule</a></div></li>
+						<li class="nav-item"><a class="nav-link link text-white display-4" href="FacultyList.html">
+
+                        View Faculty</a></li><li class="nav-item"><a class="nav-link link text-white display-4" href="About.html">
+
+                        About</a></li><li class="nav-item"><a class="nav-link link text-white display-4" href="Home.html">
+
+                        Log Out</a></li></ul>
+
+        </div>
+    </nav>
+</section>
+<section>
+    <div class="row">
+        <div class="col">
+          <button class="btn modal-buttons col-12"  type="button" data-toggle="modal" data-target="#addRooms" aria-expanded="false" aria-controls="addRooms">
+            Rooms
+          </button>
+        </div>
+      <div class="col">
+        <button class="btn modal-buttons col-12" type="button" data-toggle="modal" data-target="#addTime" aria-expanded="false" aria-controls="addTime">
+          Time
+        </button>
+      </div>
+      <div class="col">
+        <button class="btn modal-buttons col-12" type="button" data-toggle="modal" data-target="#addSubjects" aria-expanded="false" aria-controls="addSubjects">
+          Subjects
+        </button>
+      </div>
+      <div class="col">
+        <button class="btn modal-buttons col-12" type="button" data-toggle="modal" data-target="#addProfessors" aria-expanded="false" aria-controls="addProfessors">
+          Professors
+        </button>
+      </div>
+      <div class="col">
+        <button class="btn modal-buttons col-12" type="button" data-toggle="modal" data-target="#addSchedule" aria-expanded="false" aria-controls="addSchedule">
+          Schedule
+        </button>
+      </div>
+  </div>
+      
+      <!-- Room Modal -->
+      <div class="modal fade" id="addRooms" tabindex="-1" role="dialog" aria-labelledby="addRoomLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="addRoomLabel">Room Maintenance</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                    <form>
+                            <div class="form-group">
+                              <label for="insRoom">Add a Room</label>
+                              <input type="text" class="form-control" id="insRoom" placeholder="Room">
+                            </div>
+                            <button id="rSubmit" name="rSubmit" class= "btn button-submit">Submit</button>
+              </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn pup-buttons">Edit</button>
+                <button type="button" class="btn pup-buttons">View</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+          <!-- Time Modal -->
+          <div class="modal fade" id="addTime" tabindex="-1" role="dialog" aria-labelledby="addTimeLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="addTimeLabel">Time Maintenance</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                                <div class="form-group">
+                                        <label class="col-md-4 control-label" for="tStart">Time Start</label>
+                                        <div class="col-md-4">
+                                          <select id="tStart" name="tStart" class="form-control">
+                                            <option value="1">8:00 AM</option>
+                                            <option value="2">8:30 AM</option>
+                                            <option value="3">9:00 AM</option>
+                                          </select>
+                                        </div>
+                                </div>
+                                <div class="form-group">
+                                        <label class="col-md-4 control-label" for="tEnd">Time End</label>
+                                        <div class="col-md-4">
+                                          <select id="tEnd" name="tEnd" class="form-control">
+                                            <option value="1">7:00 PM</option>
+                                            <option value="2">7:30 PM</option>
+                                            <option value="3">8:00 PM</option>
+                                          </select>
+                                        </div>
+                                </div>
+                            <button id="tSubmit" name="tSubmit" class= "btn button-submit">Submit</button>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn pup-buttons">Edit</button>
+                        <button type="button" class="btn pup-buttons">View</button>
+                    </div>
+                  </div>
+                </div>
+  </div>
+          <!--Subjects Modal -->
+          <div class="modal fade" id="addSubjects" tabindex="-1" role="dialog" aria-labelledby="addSubjectsLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="addSubjectsLabel">Subjects Maintenance</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                            <form>
+
+                              <!-- Text input-->
+                              <div class="form-group">
+                                <label class="col-md-8 control-label" for="sCode">Subject Code</label>
+                                <div class="col-md-8">
+                                  <input id="sCode" name="sCode" type="text" placeholder="Subject Code" class="form-control input-md" required=""></div></div>
+                                  <div class="form-group"><div class="col-md-8"><span style="font-size: 1rem;">Subject Name</span></div></div><div class="form-group"><div class="col-md-8">
+                                    <input id="sName" name="sName" type="text" placeholder="Subject Name" class="form-control input-md" required="">
+
+                                  </div>
+                                </div>
+
+                                <!-- Select Basic -->
+                                <div class="form-group">
+                                  <label class="col-md-8 control-label" for="sPrereq">Prerequisites</label>
+                                  <div class="col-md-8">
+                                    <select id="sPrereq" name="sPrereq" class="form-control">
+                                      <option value="1">Option one</option>
+                                      <option value="2">Option two</option>
+                                    </select>
+                                  </div>
+                                </div>
+
+                                <!-- Select Basic -->
+                                <div class="form-group">
+                                  <label class="col-md-8 control-label" for="cAffiliated">Course Affiliated</label>
+                                  <div class="col-md-8">
+                                    <select id="cAffiliated" name="cAffiliated" class="form-control">
+                                      <option value="1">Information Technology</option>
+                                      <option value="2">Accountancy</option>
+                                      <option value="3">Finance</option>
+                                      <option value="4">Education</option>
+                                      <option value="5">Entrepreneurship</option>
+                                      <option value="6">Hospitality Management</option>
+                                      <option value="7">General Education</option>
+                                    </select>
+                                  </div>
+                                </div>
+
+                                <!-- Multiple Radios -->
+                                <div class="form-group">
+                                  <label class="col-md-8 control-label" for="sUnits">Subject Units</label>
+                                  <div class="col-md-8">
+                                    <div class="radio">
+                                      <label for="sUnits-0">
+                                        <input type="radio" name="sUnits" id="sUnits-0" value="1" checked="checked">
+                                        3
+                                      </label>
+                                    </div>
+                                    <div class="radio">
+                                      <label for="sUnits-1">
+                                        <input type="radio" name="sUnits" id="sUnits-1" value="2">
+                                        5
+                                      </label>
+                                    </div>
+                                  </div>
+                                </div>
+                                  <button id="sSubmit" name="sSubmit" class= "btn button-submit">Submit</button>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn pup-buttons">Edit</button>
+                        <button type="button" class="btn pup-buttons">View</button>
+                    </div>
+                  </div>
+                </div>
+  </div>
+
+        <!-- Professor Modal -->
+        <div class="modal fade" id="addProfessors" tabindex="-1" role="dialog" aria-labelledby="addProfessorsLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="addProfessorsLabel">Professor Maintenance</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">×</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                      <form>
+                              <div class="form-group">
+                                <form class="form-horizontal">
+                                  <fieldset>
+                                    <!-- Text input-->
+                                    <div class="form-group">
+                                      <label class="col-md-8 control-label" for="fID">Faculty ID</label>
+                                      <div class="col-md-8">
+                                        <input id="fID" name="fID" type="text" placeholder="Faculty ID" class="form-control input-md" required="">
+                        
+                                      </div>
+                                    </div>
+                        
+                                    <!-- Text input-->
+                                    <div class="form-group">
+                                      <label class="col-md-8 control-label" for="proflName">Last Name</label>
+                                      <div class="col-md-8">
+                                        <input id="proflName" name="proflName" type="text" placeholder="Last Name" class="form-control input-md" required="">
+                        
+                                      </div>
+                                    </div>
+                        
+                                    <!-- Text input-->
+                                    <div class="form-group">
+                                      <label class="col-md-8 control-label" for="proffName">First Name</label>
+                                      <div class="col-md-8">
+                                        <input id="proffName" name="proffName" type="text" placeholder="First Name" class="form-control input-md" required="">
+                        
+                                      </div>
+                                    </div>
+                        
+                                    <!-- Select Basic -->
+                                    <div class="form-group">
+                                      <label class="col-md-8 control-label" for="fType">Faculty Type</label>
+                                      <div class="col-md-8">
+                                        <select id="fType" name="fType" class="form-control">
+                                          <option value="1">Full-time</option>
+                                          <option value="2">Part-time</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                        
+                                    <!-- Select Basic -->
+                                    <div class="form-group">
+                                      <label class="col-md-8 control-label" for="fExp">Expertise</label>
+                                      <div class="col-md-8">
+                                        <select id="fExp" name="fExp" class="form-control">
+                                          <option value="1">Accountancy</option>
+                                          <option value="2">Information Technology</option>
+                                          <option value="3">Finance</option>
+                                          <option value="4">Entrepreneurship</option>
+                                          <option value="5">Education</option>
+                                          <option value="6">Hospitality Management</option>
+                                          <option value="7">General Education</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                        
+                                    <button id="rSubmit" name="pSubmit" class= "btn button-submit">Submit</button>
+                               </div>
+                              </fieldset>
+                            </form>
+            </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn pup-buttons">Edit</button>
+                  <button type="button" class="btn pup-buttons">View</button>
+              </div>
+          </div>
+  </div>
+        </div>
+        <!-- Schedule Modal -->
+        <div class="modal fade" id="addSchedule" tabindex="-1" role="dialog" aria-labelledby="addScheduleLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="addScheduleLabel">Schedule Maintenance</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">×</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form class="form-horizontal">
+                  <fieldset>
+                                <!-- Select Basic -->
+            <div class="form-group">
+                <label class="col-md-8 control-label" for="pName">Professor</label>
+                <div class="col-md-8">
+                  <select id="pName" name="pName" class="form-control">
+                    <option value="1">Option one</option>
+                    <option value="2">Option two</option>
+                  </select>
+                </div>
+              </div>
+  
+              <!-- Select Basic -->
+              <div class="form-group">
+                <label class="col-md-8 control-label" for="cName">Course Name</label>
+                <div class="col-md-8">
+                  <select id="cName" name="cName" class="form-control">
+                    <option value="1">IT</option>
+                    <option value="2">HM</option>
+                    <option value="3">Entrep</option>
+                    <option value="4">Educ</option>
+                    <option value="5">Gen. Ed</option>
+                    <option value="6">Accountancy</option>
+                    <option value="7">Finance</option>
+                  </select>
+                </div>
+              </div>
+  
+              <!-- Select Basic -->
+              <div class="form-group">
+                <label class="col-md-8 control-label" for="sName">Subject Name</label>
+                <div class="col-md-8">
+                  <select id="sName" name="sName" class="form-control">
+                    <option value="1">Capstone Project</option>
+                    <option value="2">Professional Ethics</option>
+                    <option value="3">Rizal</option>
+                  </select>
+                </div>
+              </div>
+  
+            <!-- Select Basic -->
+            <div class="form-group">
+              <label class="col-md-8 control-label" for="rName">Room</label>
+              <div class="col-md-8">
+                <select id="rName" name="rName" class="form-control">
+                  <option value="1">MB202</option>
+                  <option value="2">MB302</option>
+                  <option value="3">MB208</option>
+                </select>
+              </div>
+            </div>
+  
+            <!-- Multiple Radios (inline) -->
+            <div class="form-group">
+              <label class="col-md-8 control-label" for="rDay">Day</label>
+              <div class="col-md-8">
+                <label class="radio-inline" for="rDay-0">
+                  <input type="radio" name="rDay" id="rDay-0" value="1" checked="checked">
+                  M
+                </label>
+                <label class="radio-inline" for="rDay-1">
+                  <input type="radio" name="rDay" id="rDay-1" value="2">
+                  Tu
+                </label>
+                <label class="radio-inline" for="rDay-2">
+                  <input type="radio" name="rDay" id="rDay-2" value="3">
+                  W
+                </label>
+                <label class="radio-inline" for="rDay-3">
+                  <input type="radio" name="rDay" id="rDay-3" value="4">
+                  Th
+                </label>
+                <label class="radio-inline" for="rDay-4">
+                  <input type="radio" name="rDay" id="rDay-4" value="5">
+                  F
+                </label>
+                <label class="radio-inline" for="rDay-5">
+                  <input type="radio" name="rDay" id="rDay-5" value="6">
+                  S
+                </label>
+              </div>
+            </div>
+  
+            <!-- Button Drop Down -->
+            <div class="form-group">
+              <label class="col-md-8 control-label" for="tStart">Time Start</label>
+              <div class="col-md-8">
+                <div class="input-group">
+                  <input id="tStart" name="tStart" class="form-control" placeholder="Time Start" type="text" required="">
+                  <div class="input-group-btn">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                      Choose
+                      <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu pull-right">
+                      <li><a href="#">Option one</a></li>
+                      <li><a href="#">Option two</a></li>
+                      <li><a href="#">Option three</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <!-- Button Drop Down -->
+            <div class="form-group">
+              <label class="col-md-8 control-label" for="tEnd">Time End</label>
+              <div class="col-md-8">
+                <div class="input-group">
+                  <input id="tEnd" name="tEnd" class="form-control" placeholder="Time End" type="text" required="">
+                  <div class="input-group-btn">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                      Choose
+                      <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu pull-right">
+                      <li><a href="#">Option one</a></li>
+                      <li><a href="#">Option two</a></li>
+                      <li><a href="#">Option three</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+              <button id="rSubmit" name="rSubmit" class= "btn button-submit">Submit</button>
+              </fieldset>
+            </form>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn pup-buttons">Edit</button>
+                  <button type="button" class="btn pup-buttons">View</button>
+              </div>
+            </div>
+          </div>
+        </div>
+</section>
+
+
+  <script src="assets/web/assets/jquery/jquery.min.js"></script>
+  <script src="assets/popper/popper.min.js"></script>
+  <script src="assets/tether/tether.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/smoothscroll/smooth-scroll.js"></script>
+  <script src="assets/dropdown/js/script.min.js"></script>
+  <script src="assets/touchswipe/jquery.touch-swipe.min.js"></script>
+  <script src="assets/vimeoplayer/jquery.mb.vimeo_player.js"></script>
+  <script src="assets/parallax/jarallax.min.js"></script>
+  <script src="assets/snow-plugins/schnee.js"></script>
+  <script src="assets/theme/js/script.js"></script>
+
+
+</body>
+</html>
