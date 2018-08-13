@@ -2,14 +2,16 @@
 <html lang="{{ config('app.locale')}}">
 <head>
 
-  <link rel="stylesheet" href="{{asset('sass/mobirise-icons.scss')}}" />
-  <link rel="stylesheet" href="{{asset('sass/tether.min.scss')}}" />
-  <link rel="stylesheet" href="{{asset('sass/bootstrap.min.scss')}}" />
-  <link rel="stylesheet" href="{{asset('sass/bootstrap-grid.min.scss')}}" />
-  <link rel="stylesheet" href="{{asset('sass/bootstrap-reboot.min.scss')}}" />
-  <link rel="stylesheet" href="{{asset('sass/snow-plugin/style.scss')}}" />
-  <link rel="stylesheet" href="{{asset('sass/theme/css/style.scss')}}" />
-  <link rel="stylesheet" href="{{asset('sass/mbr-additional.scss')}}" type="text/css" />
+  <link rel="stylesheet" href="{{asset('css/mobirise-icons.css')}}" />
+  <link rel="stylesheet" href="{{asset('css/tether.min.css')}}" />
+  <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}" />
+  <link rel="stylesheet" href="{{asset('css/bootstrap-grid.min.css')}}" />
+  <link rel="stylesheet" href="{{asset('css/bootstrap-reboot.min.css')}}" />
+  <link rel="stylesheet" href="{{asset('css/snow-plugin/style.css')}}" />
+  <link rel="stylesheet" href="{{asset('css/theme/css/style.css')}}" />
+  <link rel="stylesheet" href="{{asset('css/mbr-additional.css')}}" type="text/css" />
+  <link rel="stylesheet" href="{{asset('sass/styles.scss')}}"/>
+
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="generator" content="Mobirise v4.7.7, mobirise.com" />

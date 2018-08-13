@@ -6,7 +6,7 @@
 @section('content')
 	
 <section>
-      <img class="img-fluid" src ="Header.jpg" alt="PUP SJ Website" />  </section>
+      <img class="img-fluid" src ="{{asset('img/header2.jpg')}}";  />  </section>
 <section class="cid-qW67Rcphaw mbr-fullscreen mbr-parallax-background" id="header2-37">
     <div class="mbr-overlay" style="opacity: 0.7; background-color: rgb(255, 255, 255);"></div>
 <video width="350" controls>
@@ -19,7 +19,7 @@
 <div class="login-form">
 <div class="main-div">
     <div class="panel">
-   <h2>Admin Login</h2>
+   <h2>Login</h2>
    <p>Please enter your email and password</p>
    </div>
     <form id="Login">
