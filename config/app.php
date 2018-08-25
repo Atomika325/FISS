@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'FISS'),
 
     /*
     |--------------------------------------------------------------------------
@@ -146,6 +146,11 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+
+         /**
+        * Third Party Service Providers...
+        */
+        Bican\Roles\RolesServiceProvider::class,
 
         /*
          * Package Service Providers...

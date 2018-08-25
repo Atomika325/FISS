@@ -139,33 +139,23 @@ body {font-family: "Lato", sans-serif; }
 </head>
 <body>
     <section>
-            <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <nav class="navbar navbar-expand-sm bg-light navbar-light">
                     <!-- Brand/logo -->
                     <a class="navbar-brand" href="/admin">FISS</a>
                     
                     <!-- Links -->
                     <ul class="navbar-nav">
                       <li class="nav-item">
-                        <a class="nav-link" href="/admin">Home</a>
+                        <a class="nav-link" href="/professor">Home</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="/admin/add">Add</a>
+                        <a class="nav-link" href="/professor/profile">Profile</a>
                       </li>
-                      <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Schedule
-                          </a>
-                          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="/admin/prof-sched">Professor Schedule</a>
-                            <a class="dropdown-item" href="/admin/stud-sched">Student Schedule</a>
-                          </div>
-                        </li>
-                  
                       <li class="nav-item">
-                        <a class="nav-link" href="/admin/faculty-list">Faculty List</a>
+                        <a class="nav-link" href="/professor/schedule">Schedule</a>
                       </li>
                           <li class="nav-item">
-                        <a class="nav-link" href="/admin/about">About</a>
+                        <a class="nav-link" href="/professor/about">About</a>
                       </li>
                           </li>
                           <li class="nav-item">
