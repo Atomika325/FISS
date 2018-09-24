@@ -17,6 +17,10 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="generator" content="Mobirise v4.7.7, mobirise.com" />
+  
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
   <link rel="shortcut icon" href="images/Polytechnic_University_of_the_Philippines_San_Juan_Logo.svg.png" type="image/x-icon" />
   <meta name="Description" content="" />
@@ -93,10 +97,13 @@ body {font-family: "Lato", sans-serif; }
 /* Style the tab */
 .tab {
     float: left;
-    border: 1px solid #C0C0C0;
-    background-color: #C0C0C0;
-    width: 300px;
-    height: 275px;
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    padding-top: 66px;
 }
 
 /* Style the buttons inside the tab */
@@ -117,7 +124,7 @@ body {font-family: "Lato", sans-serif; }
 
 /* Change background color of buttons on hover */
 .tab button:hover {
-    background-color: #808080;
+    background-color: #ccc;
 }
 
 /* Create an active/current "tab button" class */
@@ -127,44 +134,86 @@ body {font-family: "Lato", sans-serif; }
 
 /* Style the tab content */
 .tabcontent {
-    float: left;
+    float: auto;
     padding: 0px 12px;
     border: 0px solid #ccc;
     width: 70%;
     border-left: none;
     height: 300px;
+    background-size: 100%;
+}
+ggez{
+border:none;
+width:500px;
+margin:0px auto;
+}	
+#picprof {
+	position:absolute;
+	width:550px;
+	height:50px;
+	z-index:10;
+	left: 275px;
+	top: 100px;
 }
 
+#profs {
+	position:absolute;
+	width:1500px;
+	height:50px;
+	z-index:1;
+	left: 575px;
+	top: 100px;
+}
+
+#able {
+	position:absolute;
+	width:600px;
+	height:100px;
+	z-index:1;
+	left: 425px;
+	top: 100px;
+}
+
+.sidenav {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.main {
+    margin-left: 160px; /* Same as the width of the sidenav */
+    font-size: 28px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
 </style>
+
 </head>
 <body>
-    <section>
-            <nav class="navbar navbar-expand-sm bg-light navbar-light">
-                    <!-- Brand/logo -->
-                    <a class="navbar-brand" href="/admin">FISS</a>
-                    
-                    <!-- Links -->
-                    <ul class="navbar-nav">
-                      <li class="nav-item">
-                        <a class="nav-link" href="/professor">Home</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="/professor/profile">Profile</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="/professor/schedule">Schedule</a>
-                      </li>
-                          <li class="nav-item">
-                        <a class="nav-link" href="/professor/about">About</a>
-                      </li>
-                          </li>
-                          <li class="nav-item">
-                        <a class="nav-link" href="/">Log Out</a>
-                      </li>
-                    </ul>
-                  </nav>
-                  
-    </section>
+    @include('inc.profnavbar')
+    @include('inc.messages')
     @yield('content')
 
   <script src="{{asset('js/jquery.min.js')}}"></script>

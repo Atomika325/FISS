@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Professor;
 
 class ProfessorsController extends Controller
 {
@@ -34,7 +35,24 @@ class ProfessorsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'faculty_id' => 'required',
+            'last_name' =>'required',
+            'first_name' => 'required',
+            'faculty_type' => 'required',
+            'expertise' => 'required'
+        ]);
+
+        //Create Post
+        $professor = new Professor;
+        $professor->faculty_id = $request->input('faculty_id');
+        $professor->last_name = $request->input('last_name');
+        $professor->first_name = $request->input('first_name');
+        $professor->faculty_type = $request->input('faculty_type');
+        $professor->expertise = $request->input('expertise');
+        $professor->save();
+
+        return redirect('/admin/add')->with('success', 'Professor Created!');
     }
 
     /**

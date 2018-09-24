@@ -26,8 +26,24 @@ class PagesController extends Controller
         return view('pages.FacultyList')->with('title', $title);
     }
     public function crud(){
-        $title ='Add';
+        $title ='Add Home Page';
         return view('pages.newpractice')->with('title', $title);
+    }
+    public function crudroom(){
+        $title ='Add Room';
+        return view('pages.crud.room')->with('title', $title);
+    }
+    public function crudcourse(){
+        $title ='Add Course';
+        return view('pages.crud.course')->with('title', $title);
+    }    
+    public function crudsubj(){
+        $title ='Add Subject';
+        return view('pages.crud.subject')->with('title', $title);
+    }
+    public function crudprof(){
+        $title ='Add Professors';
+        return view('pages.crud.professor')->with('title', $title);
     }
     public function pschedule(){
         $title ='Professor Schedule';

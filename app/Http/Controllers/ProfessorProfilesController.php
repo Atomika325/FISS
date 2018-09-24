@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\ProfessorProfile;
 
 class ProfessorProfilesController extends Controller
 {
@@ -34,7 +35,37 @@ class ProfessorProfilesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'fac_pic',
+            'faculty_id' => 'required',
+            'last_name' =>'required',
+            'first_name' => 'required',
+            'email' => 'required',
+            'contact_no' => 'required',
+            'preferred_subj' => 'required',
+            'deg_grad' => 'required',
+            'master_deg',
+            'doctor_deg' ,
+            'faculty_type' => 'required',
+        ]);
+
+        //Create Post
+        $professorprofile = new ProfessorProfile;
+        $professorprofile->fac_pic = $request->input('fac_pic');
+        $professorprofile->faculty_id = $request->input('faculty_id');
+        $professorprofile->last_name = $request->input('last_name');
+        $professorprofile->first_name = $request->input('first_name');
+        $professorprofile->email = $request->input('email');
+        $professorprofile->contact_no = $request->input('contact_no');
+        $professorprofile->preferred_subj = $request->input('preferred_subj');
+        $professorprofile->deg_grad = $request->input('deg_grad');
+        $professorprofile->master_deg = $request->input('master_deg');
+        $professorprofile->doctor_deg = $request->input('doctor_deg');
+        $professorprofile->faculty_type = $request->input('faculty_type');
+        $professorprofile->save();
+
+        return redirect('/admin/add')->with('success', 'Profile Created!');
+
     }
 
     /**

@@ -1,44 +1,212 @@
 @extends('layout.appadmin')
+<style>
 
+</style>
 @section('title')
   <title>Faculty</title>
 @endsection
 
 @section('content')
 
-                <section class="engine"><a href="https://mobirise.me/i">free website creation software</a></section><section class="header12 cid-qWbDr5dpsN mbr-fullscreen mbr-parallax-background" id="header12-4d">
+  <section>
+    <div class="row"></div>
+  </section>
 
+<div id="Title">
+<h3 align="center"> Faculty List </h3>
+</div>
 
+<div id="Layer1"  align="center">
+<img src="/img/user-add-icon.png" height="150" width="150">
+<button class="btn" data-toggle="modal" data-target="#exampleModal3" >Prof 1</button>
+</div>
 
-                  <div class="mbr-overlay" style="opacity: 0.6; background-color: rgb(0, 0, 0);">
-                      <div class="container" >
-                          <h2><p style="color: white;">Information Technology</p></h2>
-                          <div class="card card-body"  style="background-color:maroon;"><h3><a href=""> Alfred Pagalilawan</a> </h3></div>
-                          <div class="card card-body"  style="background-color:maroon;" ><h3><a href=""> Elias Austria</a></div>
-                          <div class="card card-body"  style="background-color:maroon;"><h3><a href=""> Arnel Artigue</a></div>
-                          <div class="card card-body"  style="background-color:maroon;"><h3><a href=""> John Dustin Santos</a></div>
-                          <div class="card card-body"  style="background-color:maroon;"><h3><a href=""> Ribert Enierga</a></div>
-                          <div class="card card-body"  style="background-color:maroon;"><h3><a href=""> Alfred Pagalilawan</a></div>
-                        </div>
-      
-      
-                        <div class="container">
-                          <h2><p style="color: white;">General Education</p></h2>
-                          <div class="card card-body" style="background-color:maroon;"><h3><a href=""> Jaime Gutierrez</a></div>
-                          <div class="card card-body" style="background-color:maroon;"><h3><a href=""> Joel Ferrer</a></div>
-                          <div class="card card-body" style="background-color:maroon;"><h3><a href=""> Dulce Aristorenas</a></div>
-                          <div class="card card-body"  style="background-color:maroon;"><h3><a href=""> Angeline Pabilona</a></div>
-                        </div>
-    
-    
-                  </div>
+<div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModal3Label" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+	  <!-- Call mo dito yung Fname, Lname ng prof -->
+        <h5 class="modal-title" id="exampleModal3Label">Prof 1</h5>
+		<!-- Dito naman yung Faculty ID -->
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       <legend align="">Availability</legend>
 
-  
+<!-- CALL MO DITO YUNG AVAILABILITY NG PROF -->
 
+                    <!-- Multiple Checkboxes (inline) -->
+                    <div class="form-check form-check-inline">
+  <label class="form-check-label" for="inlineCheckbox1">MON</label>
+    <input id="pCStudied" name="pCStudied" type="text" size="9" class="form-control input-md" required="">
+	  <input id="pCStudied" name="pCStudied" type="text" size="9"class="form-control input-md" required="">
+</div>
+<div class="form-check form-check-inline">
+  <label class="form-check-label" for="inlineCheckbox2">TUE</label>
+    <input id="pCStudied" name="pCStudied" type="text" size="9" class="form-control input-md" required="">
+	  <input id="pCStudied" name="pCStudied" type="text" size="9"class="form-control input-md" required="">
+</div>
+<div class="form-check form-check-inline">
+  <label class="form-check-label" for="inlineCheckbox1">WED</label>
+    <input id="pCStudied" name="pCStudied" type="text" size="9" class="form-control input-md" required="">
+	  <input id="pCStudied" name="pCStudied" type="text" size="9"class="form-control input-md" required="">
+</div>
+<div class="form-check form-check-inline">
+  <label class="form-check-label" for="inlineCheckbox3">THU</label>
+    <input id="pCStudied" name="pCStudied" type="text" size="9" class="form-control input-md" required="">
+	  <input id="pCStudied" name="pCStudied" type="text" size="9"class="form-control input-md" required="">
+</div>
+<div class="form-check form-check-inline">
+  <label class="form-check-label" for="inlineCheckbox4">FRI</label>
+    <input id="pCStudied" name="pCStudied" type="text" size="9" class="form-control input-md" required="">
+	  <input id="pCStudied" name="pCStudied" type="text" size="9"class="form-control input-md" required="">
+</div>
+<div class="form-check form-check-inline">
+  <label class="form-check-label" for="inlineCheckbox5">SAT</label>
+    <input id="pCStudied" name="pCStudied" type="text" size="9" class="form-control input-xs" required="">
+	  <input id="pCStudied" name="pCStudied" type="text" size="9"class="form-control input-xs" required="">
+</div>
+      </div>
+	
+      <div class="modal-footer">
+        <button type="button" class="btn button-reset" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
-                  
-                  
+<div id="Layer3"  align="center">
+<img src="/img/user-add-icon.png" height="150" width="150">
+<button class="btn" data-toggle="modal" data-target="#exampleModal345" >Prof 3</button>
+</div>
 
+<div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModal3Label" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+	  <!-- Call mo dito yung Fname, Lname ng prof -->
+        <h5 class="modal-title" id="exampleModal345Label">Prof 3</h5>
+		<!-- Dito naman yung Faculty ID -->
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       <legend align="">Availability</legend>
 
-                  </section>
+<!-- CALL MO DITO YUNG AVAILABILITY NG PROF -->
+
+                    <!-- Multiple Checkboxes (inline) -->
+                    <div>
+  <label>MON</label>
+    <input id="pCStudied" name="pCStudied" type="text" size="9" class="form-control input-md" required="">
+	  <input id="pCStudied" name="pCStudied" type="text" size="9"class="form-control input-md" required="">
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+  <label class="form-check-label" for="inlineCheckbox2">TUE</label>
+    <input id="pCStudied" name="pCStudied" type="text" size="9" class="form-control input-md" required="">
+	  <input id="pCStudied" name="pCStudied" type="text" size="9"class="form-control input-md" required="">
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option3">
+  <label class="form-check-label" for="inlineCheckbox1">WED</label>
+    <input id="pCStudied" name="pCStudied" type="text" size="9" class="form-control input-md" required="">
+	  <input id="pCStudied" name="pCStudied" type="text" size="9"class="form-control input-md" required="">
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option4">
+  <label class="form-check-label" for="inlineCheckbox3">THU</label>
+    <input id="pCStudied" name="pCStudied" type="text" size="9" class="form-control input-md" required="">
+	  <input id="pCStudied" name="pCStudied" type="text" size="9"class="form-control input-md" required="">
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option5">
+  <label class="form-check-label" for="inlineCheckbox4">FRI</label>
+    <input id="pCStudied" name="pCStudied" type="text" size="9" class="form-control input-md" required="">
+	  <input id="pCStudied" name="pCStudied" type="text" size="9"class="form-control input-md" required="">
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option6">
+  <label class="form-check-label" for="inlineCheckbox5">SAT</label>
+    <input id="pCStudied" name="pCStudied" type="text" size="9" class="form-control input-xs" required="">
+	  <input id="pCStudied" name="pCStudied" type="text" size="9"class="form-control input-xs" required="">
+</div>
+      </div>
+	
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="Layer2"  align="center">
+<img src="/img/user-add-icon.png" height="150" width="150">
+<button class="btn" data-toggle="modal" data-target="#exampleModal34" >Prof 2</button>
+</div>
+
+<div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModal3Label" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+	  <!-- Call mo dito yung Fname, Lname ng prof -->
+        <h5 class="modal-title" id="exampleModal34Label">Prof 2</h5>
+		<!-- Dito naman yung Faculty ID -->
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       <legend align="">Availability</legend>
+
+<!-- CALL MO DITO YUNG AVAILABILITY NG PROF -->
+
+                    <!-- Multiple Checkboxes (inline) -->
+                    <div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" align=""value="option1">
+  <label class="form-check-label" for="inlineCheckbox1">MON</label>
+    <input id="pCStudied" name="pCStudied" type="text" size="9" class="form-control input-md" required="">
+	  <input id="pCStudied" name="pCStudied" type="text" size="9"class="form-control input-md" required="">
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+  <label class="form-check-label" for="inlineCheckbox2">TUE</label>
+    <input id="pCStudied" name="pCStudied" type="text" size="9" class="form-control input-md" required="">
+	  <input id="pCStudied" name="pCStudied" type="text" size="9"class="form-control input-md" required="">
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option3">
+  <label class="form-check-label" for="inlineCheckbox1">WED</label>
+    <input id="pCStudied" name="pCStudied" type="text" size="9" class="form-control input-md" required="">
+	  <input id="pCStudied" name="pCStudied" type="text" size="9"class="form-control input-md" required="">
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option4">
+  <label class="form-check-label" for="inlineCheckbox3">THU</label>
+    <input id="pCStudied" name="pCStudied" type="text" size="9" class="form-control input-md" required="">
+	  <input id="pCStudied" name="pCStudied" type="text" size="9"class="form-control input-md" required="">
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option5">
+  <label class="form-check-label" for="inlineCheckbox4">FRI</label>
+    <input id="pCStudied" name="pCStudied" type="text" size="9" class="form-control input-md" required="">
+	  <input id="pCStudied" name="pCStudied" type="text" size="9"class="form-control input-md" required="">
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option6">
+  <label class="form-check-label" for="inlineCheckbox5">SAT</label>
+    <input id="pCStudied" name="pCStudied" type="text" size="9" class="form-control input-xs" required="">
+	  <input id="pCStudied" name="pCStudied" type="text" size="9"class="form-control input-xs" required="">
+</div>
+      </div>
+	
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 @endsection

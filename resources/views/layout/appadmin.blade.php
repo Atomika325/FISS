@@ -13,10 +13,15 @@
   <link rel="stylesheet" href="{{asset('css/app.css') }}"/>
   <link rel="stylesheet" href="{{asset('css/dropdown/css/style.css')}}"/>
   <link rel="stylesheet" href="{{asset('css/navbar.css')}}"/>
+<link rel ="stylesheet" href="{{asset('css/styles.css')}}"/>
 
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="generator" content="Mobirise v4.7.7, mobirise.com" />
+  
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
   <link rel="shortcut icon" href="images/Polytechnic_University_of_the_Philippines_San_Juan_Logo.svg.png" type="image/x-icon" />
   <meta name="Description" content="" />
@@ -93,10 +98,13 @@ body {font-family: "Lato", sans-serif; }
 /* Style the tab */
 .tab {
     float: left;
-    border: 1px solid #C0C0C0;
-    background-color: #C0C0C0;
-    width: 300px;
-    height: 275px;
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    padding-top: 66px;
 }
 
 /* Style the buttons inside the tab */
@@ -117,7 +125,7 @@ body {font-family: "Lato", sans-serif; }
 
 /* Change background color of buttons on hover */
 .tab button:hover {
-    background-color: #808080;
+    background-color: ;
 }
 
 /* Create an active/current "tab button" class */
@@ -127,54 +135,65 @@ body {font-family: "Lato", sans-serif; }
 
 /* Style the tab content */
 .tabcontent {
-    float: left;
+    float: auto;
     padding: 0px 12px;
     border: 0px solid #ccc;
     width: 70%;
     border-left: none;
     height: 300px;
 }
+ggez{
+border:none;
+width:500px;
+margin:0px auto;
+}	
+#Layer1 {
+	position:absolute;
+	width:550px;
+	height:50px;
+	z-index:10;
+	left: 750px;
+	top: 100px;
+}
+.sidenav {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 8;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
 
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.main {
+    margin-left: 160px; /* Same as the width of the sidenav */
+    font-size: 28px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
 </style>
+@include('inc.adminnavbar')
 </head>
 <body>
-    <section>
-            <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-                    <!-- Brand/logo -->
-                    <a class="navbar-brand" href="/admin">FISS</a>
-                    
-                    <!-- Links -->
-                    <ul class="navbar-nav">
-                      <li class="nav-item">
-                        <a class="nav-link" href="/admin">Home</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="/admin/add">Add</a>
-                      </li>
-                      <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Schedule
-                          </a>
-                          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="/admin/prof-sched">Professor Schedule</a>
-                            <a class="dropdown-item" href="/admin/stud-sched">Student Schedule</a>
-                          </div>
-                        </li>
-                  
-                      <li class="nav-item">
-                        <a class="nav-link" href="/admin/faculty-list">Faculty List</a>
-                      </li>
-                          <li class="nav-item">
-                        <a class="nav-link" href="/admin/about">About</a>
-                      </li>
-                          </li>
-                          <li class="nav-item">
-                        <a class="nav-link" href="/">Log Out</a>
-                      </li>
-                    </ul>
-                  </nav>
-                  
-    </section>
+    @include('inc.messages')
     @yield('content')
 
   <script src="{{asset('js/jquery.min.js')}}"></script>

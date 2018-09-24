@@ -4,6 +4,7 @@
   <title>Add Home Page</title>
 @endsection
 @section('content')
+</section>
 <legend> &nbsp; 
 <p>&nbsp;
 
@@ -11,187 +12,284 @@
 
 </section>
 <div class="tab">
-  <button class="tablinks" onClick="openCity(event, 'Room')" id="defaultOpen">Room</button>
-  <button class="tablinks" onClick="openCity(event, 'Time')">Time</button>
-  <button class="tablinks" onClick="openCity(event, 'Subject')">Subject</button>
-  <button class="tablinks" onClick="openCity(event, 'Professor')">Professor</button>
+  <button class="tablinks" href="#room" onClick="openCity(event, 'Room')" id="defaultOpen">Room</button>
+  <button class="tablinks" href="#course" onClick="openCity(event, 'Course')">Course</button>
+  <button class="tablinks" href="#subject" onClick="openCity(event, 'Subject')">Subject</button>
+  <button class="tablinks" href="#professor" onClick="openCity(event, 'Professor')">Professor</button>
 </div>
 
 <div id="Room" class="tabcontent">
-  <h3>Add a Room</h3>
-  <p><form>
-                            <div class="form-group">
-                                <label class="col-md-8 control-label" for="roomno">Room no</label>
-                                <div class="col-md-8">
-                                  <input id="roomno" name="roomno" type="text" placeholder="Room no" class="form-control input-md"></div></div>
-                            <button id="rSubmit" name="rSubmit" class= "btn button-submit">Submit</button>
-							<button id="vRooms" name="vRooms" class= "btn button-submit">View Rooms</button>
+    <h3 align="center">Add a Room</h3> 
+  {!! Form::open(['action' => 'RoomsController@store', 'method' =>'POST']) !!}
+  <div class = "form-group" align="center">
+      {{Form:: label('roomNo', 'Room Number')}}
+      <div class= "col-md-6">
+        {{Form:: text('roomNo', '',['class' => 'form-control input-md','placeholder' => 'Room Number'])}}
+      </div>
+  </div>
+  <div class = "form-group" align="center">
+      {{Form:: label('roomDesc', 'Room Description')}}
+      <div class= "col-md-6">
+        {{Form:: text('roomDesc', '', ['class' => 'form-control input-md','placeholder' => 'Room Description'])}}
+      </div>
+  </div>
+  <div align = "center">
+    <div class="col-md-6">
+        {{Form::button('Submit', ['type' => 'submit', 'class' => 'btn button-submit'])}}
+        {{Form::button('Reset', ['type' => 'reset','class' => 'btn button-reset'])}}
+    </div>
+  </div>
+  {!! Form::close() !!}
 
-                          </form></p>
+						<div id="Layer1" align=""><form>
+                        <!-- Text input-->
+                        <div class="form-group" align="left">
+						<button id="rEdit" name="rEdit" class= "btn button-edit">Edit Room/s</button>
+            <table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Room No.</th>
+      <th scope="col">Description</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>           
+        <td>1</td> 
+    <td>MB201</td>
+      <td>Main Building</td>
+      <td><button type="button" class="btn btn-danger btn-sm">Delete</button></td>
+    </tr>
+  </tbody>
+</table>
+                        </div>
+				</form></div></div>
 </div>
-
-<div id="Time" class="tabcontent">
-  <h3>Add Time</h3>
-  <p><form>
-                                <div class="form-group">
-                                        <label class="col-md-4 control-label" for="tStart">Time Start</label>
-                                        <div class="col-md-4">
-                                          <select id="tStart" name="tStart" class="form-control">
-                                            <option value="1">8:00 AM</option>
-                                            <option value="2">8:30 AM</option>
-                                            <option value="3">9:00 AM</option>
-                                          </select>
-                                        </div>
-                                </div>
-                                <div class="form-group">
-                                        <label class="col-md-4 control-label" for="tEnd">Time End</label>
-                                        <div class="col-md-4">
-                                          <select id="tEnd" name="tEnd" class="form-control">
-                                            <option value="1">7:00 PM</option>
-                                            <option value="2">7:30 PM</option>
-                                            <option value="3">8:00 PM</option>
-                                          </select>
-                                        </div>
-                                </div>
-                            <button id="tSubmit" name="tSubmit" class= "btn button-submit">Submit</button>
-                        </form>
-  </p> 
+<div id="Course" class="tabcontent" align="center">
+    <h3 align="center">Add a Course</h3> 
+    {!! Form::open(['action' => 'CoursesController@store', 'method' =>'POST']) !!}
+  <div class = "form-group" align="center">
+      {{Form:: label('coursecode', 'Course Code')}}
+      <div class= "col-md-6">
+        {{Form:: text('coursecode', '',['class' => 'form-control input-md','placeholder' => 'Course Code (ex: BSIT-SJ)'])}}
+      </div>
+  </div>
+  <div class = "form-group" align="center">
+      {{Form:: label('coursedesc', 'Course Description')}}
+      <div class= "col-md-6">
+        {{Form:: text('coursedesc', '', ['class' => 'form-control input-md','placeholder' => 'Course Description'])}}
+      </div>
+  </div>
+  <div align = "center">
+    <div class="col-md-6">
+        {{Form::button('Submit', ['type' => 'submit', 'class' => 'btn button-submit'])}}
+        {{Form::button('Reset', ['type' => 'reset','class' => 'btn button-reset'])}}
+    </div>
+  </div>
+  {!! Form::close() !!}
+						<div id="Layer1" align="left"><form>				
+                        <!-- Text input-->
+                        <div class="form-group" align="left">
+						<button id="rEdit" name="rEdit" class= "btn button-edit">Edit Course/s</button>
+                          <table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Course Code</th>
+      <th scope="col">Course Description</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>     
+      <th scope="row">1</th>
+      <td>BSIT-SJ</td>
+      <td>Bachelor of Science in Information Technology</td>
+      <td><button type="button" class="btn btn-danger btn-sm">Delete</button></td>  
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td colspan="2"></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+                        </div>
+        </form></div></div>
+<div id="Subject" class="tabcontent" align="center">
+    <h3 align="center">Add a Subject</h3> 
+    {!! Form::open(['action' => 'SubjectsController@store', 'method' =>'POST']) !!}
+    <div class = "form-group" align="center">
+        {{Form:: label('subj_code', 'Subject Code')}}
+        <div class= "col-md-6">
+          {{Form:: text('subj_code', '',['class' => 'form-control input-md','placeholder' => 'Subject Code'])}}
+        </div>
+    </div>
+    <div class = "form-group" align="center">
+        {{Form:: label('subj_desc', 'Subject Description')}}
+        <div class= "col-md-6">
+          {{Form:: text('subj_desc', '', ['class' => 'form-control input-md','placeholder' => 'Subject Description'])}}
+        </div>
+    </div>
+    <div class ="form-group" align="center">
+        {{Form:: label('subj_hours', 'Subject Hours')}}
+        <div class="col-md-6">
+          {{Form:: select('subj_hours',['1' => '1', '1.5' => '1.5', '2' => '2', '3' =>'3', '5' => '5', '6' => '6', '9' => '9'],null,['class' => 'form-control'])}}
+        </div>
+      </div>
+        <div class ="form-group" align="center">
+            {{Form:: label('course_affiliated', 'Course Affiliated')}}
+        <div class="col-md-6">
+            {{Form:: select('course_affiliated',['Information Technology' => 'Information Technology', 'Accountancy' => 'Accountancy', 'Finance' => 'Finance', 'Entrepreneurship' =>'Entrepreneurship', 'Education' => 'Education', 'Hospitality Management' => 'Hospitality Management', 'General Education' => 'General Education'],null,['class' => 'form-control'])}}
+        </div>
+      </div>
+      <div class ="form-group" align="center">
+          {{Form:: label('subj_units', 'Subject Units')}}
+        <div class="col-md-6">
+            {{Form:: select('subj_units',['1' => '1', '2' => '2', '3' =>'3', '6' => '6', '9' => '9'],null,['class' => 'form-control'])}}
+        </div>
+      </div>
+    
+    <div align = "center">
+      <div class="col-md-6">
+          {{Form::button('Submit', ['type' => 'submit', 'class' => 'btn button-submit'])}}
+          {{Form::button('Reset', ['type' => 'reset','class' => 'btn button-reset'])}}
+      </div>
+    </div>
+    {!! Form::close() !!}
+    								  <div id="Layer1" align="left"><form>				
+                        <!-- Text input-->
+                        <div class="form-group" align="left">
+						<button id="rEdit" name="rEdit" class= "btn button-edit">Edit Subject/s</button>
+                          <table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Subject	 Code</th>
+      <th scope="col">Subject Description</th>
+	   <th scope="col">Units</th>
+	    <th scope="col">Hours</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>COMP2103</td>
+      <td>Object-oriented programming</td>
+      <td>3</td>
+	  <td>5</td>
+	  <td><button type="button" class="btn btn-danger btn-sm">Delete</button></td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td></td>
+      <td></td>
+      <td></td>
+	  <td></td>
+	  <td></td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td colspan="2"></td>
+      <td></td>
+	  <td></td>
+	 
+    </tr>
+  </tbody>
+</table>
+                        </div>
+        </form></div>
 </div>
+</div>  
+<div id="Professor" class="tabcontent" align="center">
+        <h3 align="center">Add a Professor</h3> 
+        {!! Form::open(['action' => 'ProfessorsController@store', 'method' =>'POST']) !!}
+        <div class = "form-group" align="center">
+            {{Form:: label('faculty_id', 'Faculty ID')}}
+            <div class= "col-md-6">
+              {{Form:: text('faculty_id', '',['class' => 'form-control input-md','placeholder' => 'Faculty ID'])}}
+            </div>
+        </div>
+        <div class = "form-group" align="center">
+            {{Form:: label('last_name', 'Last Name')}}
+            <div class= "col-md-6">
+              {{Form:: text('last_name', '', ['class' => 'form-control input-md','placeholder' => 'Last Name'])}}
+            </div>
+        </div>
+        <div class = "form-group" align="center">
+            {{Form:: label('first_name', 'First Name')}}
+            <div class= "col-md-6">
+              {{Form:: text('first_name', '', ['class' => 'form-control input-md','placeholder' => 'First Name'])}}
+            </div>
+        </div>
+            <div class ="form-group" align="center">
+                {{Form:: label('faculty_type', 'Faculty Type')}}
+            <div class="col-md-6">
+                {{Form:: select('faculty_type',['Permanent' => 'Permanent', 'Part-Time' => 'Part-Time', 'Designee' => 'Designee'],null,['class' => 'form-control'])}}
+            </div>
+          </div>
+          <div class ="form-group" align="center">
+              {{Form:: label('expertise', 'Expertise')}}
+            <div class="col-md-6">
+                {{Form:: select('expertise',['Information Technology' => 'Information Technology', 'Accountancy' => 'Accountancy', 'Finance' => 'Finance', 'Entrepreneurship' =>'Entrepreneurship', 'Education' => 'Education', 'Hospitality Management' => 'Hospitality Management', 'General Education' => 'General Education'],null,['class' => 'form-control'])}}
+            </div>
+          </div>
+          <div align = "center">
+              <div class="col-md-6">
+                  {{Form::button('Submit', ['type' => 'submit', 'class' => 'btn button-submit'])}}
+                  {{Form::button('Reset', ['type' => 'reset','class' => 'btn button-reset'])}}
+              </div>
+            </div>
+            {!! Form::close() !!}
+							<div id="Layer1" align="left"><form>
+                        <!-- Text input-->
+                        <div class="form-group" align="left">
+						<button id="rEdit" name="rEdit" class= "btn button-edit">Edit Professor/s</button>
+                          <table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Faculty ID</th>
+      <th scope="col">Full Name</th>
+	  <th scope="col">Faculty Type</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td></td>
+      <td></td>
+      <td></td>
+	  <td></td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td></td>
+      <td></td>
+      <td></td>
+	  <td></td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td></td>
+	  <td></td>
+      <td></td>
+	  <td></td>
+    </tr>
+  </tbody>
+</table>
+                        </div>
+        </form></div></div>
 
-<div id="Subject" class="tabcontent">
-  <h3>Add Subject</h3>
-  <p>
-  <form>
-
-                              <!-- Text input-->
-                              <div class="form-group">
-                                <label class="col-md-8 control-label" for="sCode">Subject Code</label>
-                                <div class="col-md-8">
-                                  <input id="sCode" name="sCode" type="text" placeholder="Subject Code" class="form-control input-md" required=""></div></div>
-                                  <div class="form-group"><div class="col-md-8"><span style="font-size: 1rem;">Subject Name</span></div></div><div class="form-group"><div class="col-md-8">
-                                    <input id="sName" name="sName" type="text" placeholder="Subject Name" class="form-control input-md" required="">
-
-                                  </div>
-                                </div>
-
-                                <!-- Select Basic -->
-                                <div class="form-group">
-                                  <label class="col-md-8 control-label" for="sPrereq">Prerequisites</label>
-                                  <div class="col-md-8">
-                                    <select id="sPrereq" name="sPrereq" class="form-control">
-                                      <option value="1">Option one</option>
-                                      <option value="2">Option two</option>
-                                    </select>
-                                  </div>
-                                </div>
-
-                                <!-- Select Basic -->
-                                <div class="form-group">
-                                  <label class="col-md-8 control-label" for="cAffiliated">Course Affiliated</label>
-                                  <div class="col-md-8">
-                                    <select id="cAffiliated" name="cAffiliated" class="form-control">
-                                      <option value="1">Information Technology</option>
-                                      <option value="2">Accountancy</option>
-                                      <option value="3">Finance</option>
-                                      <option value="4">Education</option>
-                                      <option value="5">Entrepreneurship</option>
-                                      <option value="6">Hospitality Management</option>
-                                      <option value="7">General Education</option>
-                                    </select>
-                                  </div>
-                                </div>
-
-                                <!-- Multiple Radios -->
-                                <div class="form-group">
-                                  <label class="col-md-8 control-label" for="sUnits">Subject Units</label>
-                                  <div class="col-md-8">
-                                    <div class="radio">
-                                      <label for="sUnits-0">
-                                        <input type="radio" name="sUnits" id="sUnits-0" value="1" checked="checked">
-                                        3
-                                      </label>
-                                    </div>
-                                    <div class="radio">
-                                      <label for="sUnits-1">
-                                        <input type="radio" name="sUnits" id="sUnits-1" value="2">
-                                        5
-                                      </label>
-                                    </div>
-                                  </div>
-                                </div>
-                                  <button id="sSubmit" name="sSubmit" class= "btn button-submit">Submit</button>
-								  <button id="sSubmit" name="sSubmit" class= "btn button-submit">View Subjects</button>
-  </form>
-</div>
-                  </div>
-                </div>
-              </div></p>
-</div>
-<div id="Professor" class="tabcontent">
-  <h3>Add Professor</h3>
-  <p><form>
-                              <div class="form-group">
-                                <form class="form-horizontal">
-                                  <fieldset>
-                                    <!-- Text input-->
-                                    <div class="form-group">
-                                      <label class="col-md-8 control-label" for="fID">Faculty ID</label>
-                                      <div class="col-md-8">
-                                        <input id="fID" name="fID" type="text" placeholder="Faculty ID" class="form-control input-md" required="">
-                        
-                                      </div>
-                                    </div>
-                        
-                                    <!-- Text input-->
-                                    <div class="form-group">
-                                      <label class="col-md-8 control-label" for="proflName">Last Name</label>
-                                      <div class="col-md-8">
-                                        <input id="proflName" name="proflName" type="text" placeholder="Last Name" class="form-control input-md" required="">
-                        
-                                      </div>
-                                    </div>
-                        
-                                    <!-- Text input-->
-                                    <div class="form-group">
-                                      <label class="col-md-8 control-label" for="proffName">First Name</label>
-                                      <div class="col-md-8">
-                                        <input id="proffName" name="proffName" type="text" placeholder="First Name" class="form-control input-md" required="">
-                        
-                                      </div>
-                                    </div>
-                        
-                                    <!-- Select Basic -->
-                                    <div class="form-group">
-                                      <label class="col-md-8 control-label" for="fType">Faculty Type</label>
-                                      <div class="col-md-8">
-                                        <select id="fType" name="fType" class="form-control">
-                                          <option value="1">Full-time</option>
-                                          <option value="2">Part-time</option>
-                                        </select>
-                                      </div>
-                                    </div>
-                        
-                                    <!-- Select Basic -->
-                                    <div class="form-group">
-                                      <label class="col-md-8 control-label" for="fExp">Expertise</label>
-                                      <div class="col-md-8">
-                                        <select id="fExp" name="fExp" class="form-control">
-                                          <option value="1">Accountancy</option>
-                                          <option value="2">Information Technology</option>
-                                          <option value="3">Finance</option>
-                                          <option value="4">Entrepreneurship</option>
-                                          <option value="5">Education</option>
-                                          <option value="6">Hospitality Management</option>
-                                          <option value="7">General Education</option>
-                                        </select>
-                                      </div>
-                                    </div>
-                        
-                                    <button id="rSubmit" name="pSubmit" class= "btn button-submit">Submit</button>
-									<button id="rSubmit" name="pSubmit" class= "btn button-submit">View Professors</button>
-                              </fieldset>
-                            </form>
-</div>
 <script>
 function openCity(evt, cityName) {
     var i, tabcontent, tablinks;

@@ -14,8 +14,13 @@ class CreateSubjectsTable extends Migration
     public function up()
     {
         Schema::create('subjects', function (Blueprint $table) {
-            $table->string('subj_code')->primary;
-            $table->string('subj_name');
+            $table->string('subj_code')->primary();
+            $table->string('subj_desc');
+            $table->enum('subj_hours',['1', '1.5', '2', '3', '5']);
+            $table->enum('course_affiliated',['Accountancy','Information Technology', 'Finance','Entrepreneurship','Education','Hospitality Management', 'General Education']);
+            $table->enum('subj_units',['1','3','5','6','9']);
+            $table->timestamps();
+
 
         });
     }

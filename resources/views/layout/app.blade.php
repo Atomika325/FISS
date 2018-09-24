@@ -17,6 +17,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="generator" content="Mobirise v4.7.7, mobirise.com" />
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+  
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
   <link rel="shortcut icon" href="images/Polytechnic_University_of_the_Philippines_San_Juan_Logo.svg.png" type="image/x-icon" />
   <meta name="Description" content="" />
   @yield('title')

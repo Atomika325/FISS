@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Room;
 
-class RoomsController extends Controller
+class AvailabilityController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +13,7 @@ class RoomsController extends Controller
      */
     public function index()
     {
-        $room = Room::select('select * from room');
-        return view ('pages.newpractice', ['room'=>$room]);
-
+        //
     }
 
     /**
@@ -37,19 +34,7 @@ class RoomsController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, [
-            'roomNo' => 'required',
-            'roomDesc' =>'required'
-        ]);
-
-        //Create Post
-        $room = new Room;
-        $room->roomNo = $request->input('roomNo');
-        $room->roomDesc = $request->input('roomDesc');
-        $room->save();
-
-        return redirect('/admin/add')->with('success', 'Room Created!');
-
+        //
     }
 
     /**
@@ -58,7 +43,7 @@ class RoomsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($roomNo)
+    public function show($id)
     {
         //
     }
@@ -95,12 +80,5 @@ class RoomsController extends Controller
     public function destroy($id)
     {
         //
-    }
-
-    public function room()
-    {
-        $room = Room::get();
-        return view ('pages.newpractice') -> with ('room', $room);
-
     }
 }

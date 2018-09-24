@@ -81,7 +81,7 @@
 
     <div class="container">
         <div class="media-container-row title">
-            <div class="col-12 col-md-8">
+            <div class="col-12" align="left">
                 <div><button class="btn pup-buttons-bordered-reverse" href="AddEditSchedule.html">Add/Edit Schedule</button></div>
             </div>
         </div>

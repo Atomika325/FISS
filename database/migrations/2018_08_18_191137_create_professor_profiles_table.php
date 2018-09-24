@@ -14,13 +14,18 @@ class CreateProfessorProfilesTable extends Migration
     public function up()
     {
         Schema::create('professor_profiles', function (Blueprint $table) {
-            $table->string('fname')->primary;
+            $table->string('faculty_id')->primary();
+            $table->binary('fac_pic');
+            $table->string('fname');
             $table->string('lname');
-            $table->string('faculty_id');
-            $table->string('email')->unique;
+            $table->string('email')->unique();
             $table->integer('contact_no');
-            $table->string('last-school-attended');
-            $table->string('pref-subj');
+            $table->string('pref_subj');
+            $table->string('deg_grad');
+            $table->string('masters_deg');
+            $table->string('doctor_deg');
+            $table->enum('faculty_type',['permanent','part-time','designee']);
+            $table->timestamps();
         });
     }
 

@@ -1,5 +1,5 @@
 @extends('layout.app')
-
+@include('inc.splashnavbar')
 @section('title')
 <title>Welcome to PUP-FISS!</title>
 @endsection
@@ -42,4 +42,5 @@
 </div>
 </div>
 </div>
+</section>
 @endsection

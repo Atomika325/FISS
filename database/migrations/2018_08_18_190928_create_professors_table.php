@@ -14,10 +14,12 @@ class CreateProfessorsTable extends Migration
     public function up()
     {
         Schema::create('professors', function (Blueprint $table) {
-            $table->string('faculty_id')->primary;
-            $table->string('lname');
-            $table->string('fname');
-     
+            $table->string('faculty_id')->primary();
+            $table->string('last_name');
+            $table->string('first_name');
+            $table->enum('faculty_type',['permanent','part-time','designee']);
+            $table->enum('expertise',['Information Technology','Accountancy', 'Finance','Entrepreneurship','Education','Hospitality Management', 'General Education']);
+            $table->timestamps();
 
         });
     }
